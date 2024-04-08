@@ -1,7 +1,7 @@
 # Simple "About Me" Python Webserver
 
 ## Purpose of the Assignment: 
-This was my introduction to the backend of web pages. I was assignmed to create a web server that:
+This was my introduction to the backend of web pages. I was assigned to create a web server that:
   * Decodes and parses HTTP requests
   * Encodes valid HTTP responses
   * Uses the middleware pattern to implement logging and static file handling
