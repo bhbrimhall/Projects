@@ -1,0 +1,158 @@
+:root{
+    --nav-color: rgb(73, 77, 134);
+    --color-one: rgb(202, 206, 255);
+    --color-two: rgb(132, 138, 204);
+}
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+#top-bar {
+    display:flex;
+    list-style-type: none;
+    background-color: var(--nav-color);
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+#top-bar li{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#top-bar li a{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+#top-bar li a:hover{
+    font-size: 25px;
+    color: black;
+    text-decoration: underline;
+}
+
+#activity-list {
+    display: flex;
+    margin: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.activity-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-one);
+    width: 250px;
+    border-radius:8px;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.activity-name{
+    font-size: 30px;
+    flex: 2;
+    display: flex;
+    align-items: end;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.activity-name a{
+    text-decoration: none;
+    color: black;
+}
+
+.activity-name a:hover{
+    text-decoration: underline;
+}
+
+.activity-time{
+    flex: 1;
+    background-color: var(--color-two);
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 18px;
+}
+
+#new-activity{
+    width: 300px;
+    padding: 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--color-one)
+}
+
+#new-activity label{
+    display: flex;
+    flex-direction: column;
+}
+
+#activity-view table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+  
+#activity-view th {
+    background-color: var(--color-two);
+    color: #000000; 
+    font-weight: bold;
+    padding: 10px;
+    text-align: left; 
+    border-bottom: 2px solid #000000; 
+}
+  
+#activity-view tr{
+    background-color: var(--color-one);
+}
+
+#activity-view td {
+    padding: 10px;
+}
+
+#new-timelog{
+    width: 300px;
+    padding: 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--color-one);
+}
+
+#new-timelog label{
+    display: flex;
+    flex-direction: column;
+}
+
+#back-button {
+    display: block;
+    border: 1px solid rgb(0, 0, 0);
+    width: 70px;
+    text-align: center;
+    background-color: var(--color-one)
+}
+
+#back-button a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}

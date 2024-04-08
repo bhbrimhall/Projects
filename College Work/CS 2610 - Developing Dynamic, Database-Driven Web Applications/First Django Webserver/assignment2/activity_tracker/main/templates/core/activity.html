@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <ul id="top-bar">
+        <li>Activity Tracker</li>
+        <li><a href="/activity/{{activity.id}}/new_timelog/">New Time Log</a></li>
+    </ul>
+
+    <div style="margin: 32px;" id="activity-view">
+        <h1>{{activity.name}}</h1>
+        <h3>Sessions</h3>
+
+        <table>
+            <tr>
+              <th>Start At</th>
+              <th>End At</th>
+              <th>Time Spent</th>
+            </tr>
+
+            {% for timelog in timelogs %}
+                <tr>
+                    <td>{{timelog.start_time}}</td>
+                    <td>{{timelog.end_time}}</td>
+                    <td>{{timelog.timeAmount}}</td>
+                </tr>
+            {% endfor %}
+
+          </table>
+        
+        <h4 id="back-button"><a href="/">Back</a></h4>
+    </div>
+    
+</body>
+</html>

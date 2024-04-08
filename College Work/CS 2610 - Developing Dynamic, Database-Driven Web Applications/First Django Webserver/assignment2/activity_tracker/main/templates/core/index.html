@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <ul id="top-bar">
+        <li>Activity Tracker</li>
+        <li><a href="/new_activity/">New Activity</a></li>
+    </ul>
+
+    <div id="activity-list">
+        {% for activity in activities %}
+
+        <div class="activity-card">
+            <div class="activity-name"><a href="/activity/{{activity.id}}">{{ activity.name }}</a></div>
+            <div class="activity-time">Time spent: {{ activity.timeSpent }}</div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+</body>
+</html>

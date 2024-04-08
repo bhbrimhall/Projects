@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+
+    <ul id="top-bar">
+        <li>Activity Tracker</li>
+        <li></li>
+    </ul>
+
+    <div style="margin: 32px;">    
+        <h1>New Activity</h1>
+
+        <form id="new-activity" action="/activity-created/" method="post">
+            <label>
+                Name:
+                <input type="text" name="activity-name">
+            </label>
+            <button>Save</button> 
+        </form>
+        <h4 id="back-button"><a href="/">Back</a></h4>
+    </div>
+
+</body>
+</html>

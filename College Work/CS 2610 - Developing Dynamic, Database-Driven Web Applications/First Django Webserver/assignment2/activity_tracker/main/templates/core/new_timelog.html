@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+
+    <ul id="top-bar">
+        <li>Activity Tracker</li>
+        <li></li>
+    </ul>
+
+    <div style="margin: 32px;">
+
+        <h1>{{activity.name}}</h1>
+
+        <h3>New Time Log</h3>
+        <form id="new-timelog" action="/timelog-created/{{activity.id}}/" method="post">
+            <label>
+                Start time:
+                <input type="datetime-local" name="start-time">
+            </label>
+            <label>
+                End time:
+                <input type="datetime-local" name="end-time">
+            </label>
+            <button>Save</button> 
+        </form>
+        <h4 id="back-button"><a href="/activity/{{activity.id}}">Back</a></h4>
+    </div>
+
+</body>
+</html>
