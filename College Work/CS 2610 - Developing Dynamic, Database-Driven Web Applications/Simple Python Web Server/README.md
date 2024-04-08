@@ -9,3 +9,7 @@ This was my introduction to the backend of web pages. I was assignmed to create 
   * Has endpoints that take requests and produce responses
 
 Nice CSS wasn't a requirement for this project, so the styling is bland. The main focus was the backend stuff.
+
+## How to Run
+1. Run the `server.py` file.
+2. While the file is running, go to your browser and look up "localhost:8000". The webpage should pull up.
