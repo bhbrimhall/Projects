@@ -13,3 +13,8 @@ Nice CSS wasn't a requirement for this project, so the styling is bland. The mai
 ## How to Run
 1. Run the `server.py` file.
 2. While the file is running, go to your browser and look up "localhost:8000". The webpage should pull up.
+
+## Screenshot of Application
+Here is a screenshot of the running application.
+
+![Home page](./README%20Assets/python_webserver.png)

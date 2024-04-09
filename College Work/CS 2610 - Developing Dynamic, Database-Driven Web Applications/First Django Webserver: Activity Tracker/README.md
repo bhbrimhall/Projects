@@ -13,3 +13,10 @@ Stunning CSS wasn't a requirement for this project, so the styling is bland.
 1. Run `$ poetry shell` in your terminal to spawn into a virtual environment.
 2. Run `$ python manage.py runserver` in your terminal to start the server.
 3. Go to your browser and go to "localhost:8000". The page should pop up.
+
+## Screenshots of Application
+Here are a few screenshots of the running application.
+
+![Main page](./README%20Assets/main_page.png)
+
+![Main page](./README%20Assets/view_activity.png)
