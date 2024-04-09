@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'core/style.css' %}">
+</head>
+<body>
+
+    <header id="top-bar">
+        <div>
+            <a href="/" id="home-link">Destinations</a>
+        </div>
+        
+        <div>
+            <a href="/destinations/">My destinations</a>
+            <form action="/sessions/destroy/" method="post">
+                <button>Log out</button>
+            </form>
+        </div>
+    </header>
+
+    <div style="margin: 32px">
+
+        <form method="post" action="/destinations/{{destination.id}}/" id="form-style">
+            <label>
+                Name:
+                <input type="text" name="name" value="{{destination.name}}">
+            </label>
+
+            <label>
+                Review:
+                <textarea type="text" name="review">{{destination.review}}</textarea>
+            </label>
+
+            <label>
+                Rating (1 = trash, 5 = excellent):
+                <input type="number" min="1" max="5" name="rating" value="{{destination.rating}}">
+            </label>
+
+            <label id="public-destination">
+                Show to other users: 
+                {% if destination.share_publicly %}
+                <input type="checkbox" name="public" checked>
+                {% else %}
+                <input type="checkbox" name="public">
+                {% endif %}
+            </label>
+
+            <button type="submit">Save</button>
+            <a href="/destinations/{{destination.id}}/destroy/" id="delete-destination">
+                <button type="button">Delete</button>
+            </a>
+        </form>
+        
+    </div>
+</body>
+</html>

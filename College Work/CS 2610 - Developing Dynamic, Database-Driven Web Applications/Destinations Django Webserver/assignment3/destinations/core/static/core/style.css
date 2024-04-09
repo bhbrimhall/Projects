@@ -1,0 +1,113 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ /* nav bar */
+#top-bar {
+    display: flex;
+    width: 100%;
+    background-color: green;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+#top-bar a{
+    padding: 14px;
+    margin: 2px;
+    text-decoration: none;
+    color: white;
+}
+
+#top-bar a:hover {
+    text-decoration: underline;
+}
+
+#top-bar form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-bar div{
+    display:flex;
+}
+
+#top-bar form button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 14px;
+    margin: 2px;
+}
+
+#top-bar form button:hover{
+    text-decoration: underline;
+}
+
+
+#about{
+    text-align: center;
+}
+
+/* destinations */
+#destination-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.destination{
+    border: solid black 1px;
+    width: 100%;
+}
+
+.destination *{
+    margin: 16px;
+}
+
+/* new user form */
+#form-style{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 16px;
+}
+
+#form-style button {
+    width: 100%
+}
+
+#form-style input {
+   box-sizing: border-box;
+   width: 100%;
+}
+
+#form-style label textarea{
+    resize: none;
+    height: 150px;
+    width: 100%;
+}
+
+/* my destinations */
+.my-destination {
+    border: solid black 1px;
+    width: 100%;
+}
+
+.my-destination *{
+    margin: 16px;
+}
+
+.my-destination a{
+    font-size: 24px;
+    display: block;
+}
+
+/* new destination public? */
+#public-destination input {
+    width: auto;
+}

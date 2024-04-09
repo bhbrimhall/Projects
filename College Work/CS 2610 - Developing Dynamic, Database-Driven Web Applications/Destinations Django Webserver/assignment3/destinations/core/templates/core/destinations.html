@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'core/style.css' %}">
+</head>
+<body>
+    <header id="top-bar">
+        <div>
+            <a href="/" id="home-link">Destinations</a>
+        </div>
+        
+        <div>
+            <a href="/destinations/">My destinations</a>
+            <form action="/sessions/destroy/" method="post">
+                <button>Log out</button>
+            </form>
+        </div>
+    </header>
+
+    <div style="margin: 32px">
+
+        <h1>{{username}}'s Destinations</h1>
+        <a href="/destinations/new/" id="new-destination-link">Create New Destination</a>
+
+        <main id="destination-container">
+            {% for d in my_destinations %}
+            <div class="my-destination">
+                <a href="/destinations/{{d.id}}/">{{d.name}}</a>
+                <p>Rating: {{d.rating}}</p>
+                <p>{{d.review}}</p>
+                <p>
+                {% if d.share_publicly %}
+                Shared with public
+                {% else %}
+                Not shared with public
+                {% endif %}
+                </p>
+            </div>
+            {% endfor %}
+
+        </main>
+    </div>
+
+
+</body>
+</html>

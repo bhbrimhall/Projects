@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'core/style.css' %}">
+</head>
+<body>
+    <header id="top-bar">
+        <div>
+            <a href="/" id="home-link">Destinations</a>
+        </div>
+        {% if  logged_in %}
+            <div>
+                <a href="/destinations/">My destinations</a>
+                <form action="/sessions/destroy/" method="post">
+                    <button>Log out</button>
+                </form>
+            </div>
+        {% else %}
+        <div>
+            <a href="/sessions/new/">Sign In</a>
+            <a href="/users/new/">Create Account</a>
+        </div>
+        {% endif %}
+
+    </header>
+
+    <div style="margin: 32px">
+        <div id="about">
+            <h1>Welcome to your next destination!</h1>
+            <p>
+                Destinations is a site where you can keep track of places you gave been and share them with the world.
+                Create an account to get started, or take a look at some shared desinations below!
+            </p>
+        </div>
+
+        <main id="destination-container">
+            {% for d in destinations %}
+            <div class="destination">
+                <h2>{{d.name}}</h2>
+                <p>{{d.review}}</p>
+                <p>Reviewed by {{d.user.name}}</p>
+            </div>
+            {% endfor %}
+        </main>
+
+
+    </div>
+
+
+</body>
+</html>

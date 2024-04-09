@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'core/style.css' %}">
+</head>
+<body>
+    <header id="top-bar">
+        <div>
+            <a href="/" id="home-link">Destinations</a>
+        </div>
+        
+        <div>
+            <a href="/destinations/">My destinations</a>
+            <form action="/sessions/destroy/" method="post">
+                <button>Log out</button>
+            </form>
+        </div>
+    </header>
+
+    <div style="margin: 32px">
+
+        <form method="post" action="/destinations/" id="form-style">
+            <h1>New Destination</h1>
+            <label>
+                Name:
+                <input type="text" name="name">
+            </label>
+
+            <label>
+                Review:
+                <textarea type="text" name="review"></textarea>
+            </label>
+
+            <label>
+                Rating (1 = trash, 5 = excellent):
+                <input type="number" min="1" max="5" name="rating">
+            </label>
+
+            <label id="public-destination">
+                Show to other users: 
+                <input type="checkbox" name="public">
+            </label>
+
+            <button>Save</button>
+        </form>
+    </div>
+</body>
+</html>
