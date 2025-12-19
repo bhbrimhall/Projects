@@ -16,4 +16,4 @@ This was my first assignment using the Javascript React library in cooperation w
 ## Screenshot of Application
 Here is a screenshot of the running application.
 
-![Application](./README%20Assets/app_screenie.png))
+![Application](./README%20Assets/app_screenie.png)
