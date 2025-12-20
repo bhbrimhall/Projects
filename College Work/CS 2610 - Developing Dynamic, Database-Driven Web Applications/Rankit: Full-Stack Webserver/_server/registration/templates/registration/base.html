@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0px;
+      height: 100vh;
+      font-family: "Roboto Mono", monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(30, 30, 30);
+      
+    }
+
+    .rankit{
+      font-size: 50px;
+      padding: 48px;
+      margin: 16px;
+      text-decoration: none;
+      font-weight: 800;
+      color: white;
+    }
+
+    .auth-container{
+      border-radius: 16px;
+      display: flex;
+      background-color: rgb(70, 70, 70);
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+    }
+
+    .auth-form{
+      margin: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .auth-form-title{
+      margin: 0;
+    }
+
+    .auth-form input{
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .auth-form-new-account{
+      color: white;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <a href="/" class="rankit">Rankit</a>
+  <div class="auth-container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "registration/base.html"%}
+
+{% block content %}
+<form action="/registration/sign_in/" method="post" class="auth-form">
+
+  <h1 class="auth-form-title">Sign in</h1>
+
+  {% csrf_token %}
+
+  <div>
+    <label>
+      Username
+      <input type="text" name="username">
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Password
+      <input type="password" name="password">
+    </label>
+  </div>
+
+  <button>Sign In</button>
+
+  <a href="/registration/sign_up/" class="auth-form-new-account">Create New Account</a>
+</form>
+
+{% endblock %}
