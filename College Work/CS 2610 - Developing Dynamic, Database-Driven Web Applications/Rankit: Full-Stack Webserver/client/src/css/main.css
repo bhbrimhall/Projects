@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    width: 100%;
+    font-family: "Roboto Mono", monospace;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    box-sizing: border-box;
+    top: 0px;
+    position: absolute;
+    --red: rgb(255, 88, 88);
+    --orange:rgb(255, 190, 68);
+    --yellow:rgb(255, 255, 97);
+    --green:rgb(68, 255, 68);
+    --blue:rgb(112, 112, 255);
+    --pink:rgb(255, 105, 255);
+    --grey: grey;
+    --grey-2: rgb(70, 70, 70);
+    --grey-3: rgb(48, 48, 48);
+    --grey-4: rgb(17, 17, 17);
+}
